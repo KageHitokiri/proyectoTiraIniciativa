@@ -1,5 +1,40 @@
-/**/
+/*General*/
+*{
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    background: url('../img/die_header.jpg');
+    background-attachment: fixed;
+}
 /*Divs*/
-#mainContainer{
+#global{
     display:block;
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #afafaf;
+    box-shadow: 0px 0px 2px red;
+}
+#logotype{
+    display: block;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    background: #808080;
+    color: #2cbd16;
+    padding: 0px 5px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    float:left;
+    margin: 5px auto;
+    margin-bottom: 20px;
+}
+/*Clases*/
+.clearDiv{
+    float:none;
+    clear:both;
 }
