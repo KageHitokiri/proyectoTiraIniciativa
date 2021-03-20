@@ -50,6 +50,11 @@ body{
     height: 46px;
     transition: all 300ms;
 }
+
+#navMenu ul li:hover{
+    background:#2cbd16;
+}
+
 #navMenu a{
     display:block;
     color: white;
