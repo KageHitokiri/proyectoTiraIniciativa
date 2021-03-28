@@ -4,7 +4,7 @@ $(document).ready(()=>{
     let posts;
     let postsDiv;
     let theme;
-
+    let about_p;
 
     postsDiv = $('#posts');
     /**
@@ -80,5 +80,19 @@ $(document).ready(()=>{
     });
 
     var formName = localStorage.getItem('form__name');
-    $('#about p').html('Bienvenido, '+formName);
+
+    if (formName!=null && formName!="undefined") {
+        about_p = $('#about p');
+
+        about_p.html(formName);
+
+        about_p.append('<a href="#" id="logout">Cerrar Sesión</a>');
+        $('#login').hide();
+        $('#logout').click(function(){
+            localStorage.clear();
+            location.reload();
+        });
+
+    }
+    
 })
