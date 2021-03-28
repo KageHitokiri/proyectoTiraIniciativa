@@ -117,4 +117,14 @@ $(document).ready(()=>{
         }, 1000)
         
     }
+
+    if (window.location.href.indexOf('contact')> -1) {
+        
+        $('form input[name="birthdate"]').datepicker();
+        
+        $.validate({
+            lang: 'en'
+        })
+    }
+
 })

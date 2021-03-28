@@ -6,11 +6,19 @@
         <!--Estilos-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
-        <!--Librería moment-->
+        <!--jQuery + ui-->
+
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.css">
+
         <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
-        <!--Js-->
+        <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <!--jQuery Form validator-->
+        <script type="text/javascript" src="js/jquery.form-validator.min.js"></script>
+
+        <!-- Scripts-->
+
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
@@ -44,7 +52,33 @@
 
             <!--Contenido-->
             <section id="webContent">
-                <div id="posts">
+                <div id="box">
+                    <h3>Contacto</h3>
+                    <form id="form__contact" method="POST">
+                        <label>Nombre</label>
+                        <input type="text" name="text" data-validation='alphanumeric'/>
+
+                        <label>Apellidos</label>
+                        <input type="text" name="surname" data-validation='alphanumeric'/>
+
+                        <label>Email</label>
+                        <input type="email" name="email" data-validation='email'/>
+
+                        <label for="sex">Sexo</label>
+                        <select name="sex" data-validation="required">
+                            <option value="man">Hombre</option>
+                            <option value="woman">Mujer</option>
+                            <option value="other">Otro</option>
+                        </select>
+
+                        <label for="birthdate">Fecha de nacimiento</label>
+                        <input type="text" name="birthdate" data-validation="date" data-validation-format="dd/mm/yyyy"/>
+
+                        <label for="yearsOld">Edad</label>
+                        <input type="number" name="yearsOld" data-validation="number"/>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                    
                 </div>
                 <aside id="sidebar">
                     <div id="about">
