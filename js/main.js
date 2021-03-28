@@ -5,6 +5,7 @@ $(document).ready(()=>{
     let postsDiv;
     let theme;
 
+
     postsDiv = $('#posts');
     /**
      * Post
@@ -34,7 +35,7 @@ $(document).ready(()=>{
     ];
 
     posts.forEach((item, index) =>{
-        var post = `
+        let post = `
             <article class="post">
                 <h3>${item.title}</h3>
                 <span class="article__date">${item.date}</span>
@@ -73,5 +74,11 @@ $(document).ready(()=>{
         return false;
     });
 
-    
+    $('#login form').submit(function(){
+        var formName = $('#form__name').val();
+        localStorage.setItem('form__name', formName);
+    });
+
+    var formName = localStorage.getItem('form__name');
+    $('#about p').html('Bienvenido, '+formName);
 })
