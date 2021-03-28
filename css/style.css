@@ -104,6 +104,21 @@ footer{
     width: 50px;
     height: 115px;
 }
+#logout{
+    display: block;
+    background-color: #ccc;
+    color: black;
+    padding:10px;
+    border: 1px solid grey;
+    margin: 0 auto;
+    padding: 10px;
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor:pointer;
+}
 /*Selector de temas*/
 #to__green,
 #to__red,

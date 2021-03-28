@@ -4,6 +4,7 @@ $(document).ready(()=>{
     let posts;
     let postsDiv;
     let theme;
+    var formName;
     let about_p;
 
     postsDiv = $('#posts');
@@ -75,17 +76,15 @@ $(document).ready(()=>{
     });
 
     $('#login form').submit(function(){
-        var formName = $('#form__name').val();
+        formName = $('#form__name').val();
         localStorage.setItem('form__name', formName);
     });
 
-    var formName = localStorage.getItem('form__name');
+    formName = localStorage.getItem('form__name');
 
     if (formName!=null && formName!="undefined") {
         about_p = $('#about p');
-
-        about_p.html(formName);
-
+        about_p.html('Bienvenido, '+formName);
         about_p.append('<a href="#" id="logout">Cerrar Sesión</a>');
         $('#login').hide();
         $('#logout').click(function(){
