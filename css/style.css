@@ -165,6 +165,12 @@ footer{
     float:none;
     clear:both;
 }
+.goUp{
+    color: white;
+    text-decoration: none;
+    display:block;
+    float:right;
+}
 /*Formularios*/
 form input[type="text"],
 form input[type="email"],

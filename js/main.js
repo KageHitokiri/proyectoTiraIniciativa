@@ -58,4 +58,20 @@ $(document).ready(()=>{
     $('#to__nocturne').click(()=>{
         theme.attr('href','css/nocturneMode.css');
     });
+
+    /**
+     * Scroll suavizado
+     */
+
+    $('.goUp').click((e)=>{
+        e.preventDefault();
+
+        $('html,body').animate({
+            scrollTop:0
+        }, 300);
+
+        return false;
+    });
+
+    
 })
