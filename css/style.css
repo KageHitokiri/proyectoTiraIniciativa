@@ -104,6 +104,7 @@ footer{
     width: 50px;
     height: 115px;
 }
+/*Selector de temas*/
 #to__green,
 #to__red,
 #to__blue,
@@ -115,6 +116,7 @@ footer{
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
+    cursor:pointer;
 }
 #to__green {
     background-color: #2cbd16;
