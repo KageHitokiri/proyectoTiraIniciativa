@@ -1,0 +1,49 @@
+/*General*/
+body{
+    background: url('../img/die_header.jpg');
+    background-attachment: fixed;
+}
+footer{
+    color:white;
+    background-color: #808080;
+}
+/*Divs*/
+#global{
+    background-color: #afafaf;
+    box-shadow: 0px 0px 2px red;
+}
+#logotype{
+    background: #ca3413;
+    color: #2cbd16;
+}
+#navMenu{
+    background-color: #333;
+}
+#navMenu ul li:hover{
+    background:#ca3413;
+}
+#navMenu a{
+    color: white;
+    border-right: 1px solid red;
+}
+/*Clases*/
+.post h3{
+    color: #333;
+}
+.post .article__date{
+    color: gray;
+}
+.readMoreButton{
+    background: #ca3413;
+    color: white;
+}
+/*Formularios*/
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+    border: 2px solid #ccc;
+}
+form input[type="submit"]{
+    background-color: #ccc;
+    border: 1px solid grey;
+}
