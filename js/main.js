@@ -1,10 +1,14 @@
 'use strict'
 
 $(document).ready(()=>{
+    let posts;
+    let postsDiv;
+
+    postsDiv = $('#posts');
     /**
      * Post
      */
-    let posts = [
+    posts = [
         {
             title: 'Prueba de título 1',
             date: "Publicado el " + moment().format('dddd') +" "+ + moment().date()+ "/"+ moment().format('MMMM')+"/"+ moment().format('YYYY'),
@@ -28,5 +32,15 @@ $(document).ready(()=>{
         }
     ];
 
-    console.log(posts);
+    posts.forEach((item, index) =>{
+        var post = `
+            <article class="post">
+                <h3>${item.title}</h3>
+                <span class="article__date">${item.date}</span>
+                <p class="article__text">${item.content}</p>
+                <a href='#' class="readMoreButton">Leer más</a>
+            </article>
+        `
+        postsDiv.prepend(post);
+    })
 })
